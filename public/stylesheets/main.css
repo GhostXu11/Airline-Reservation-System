@@ -1,0 +1,152 @@
+/* line 2, ../sass/base/_base.scss */
+ul li {
+  list-style: none;
+  color: white;
+}
+/* line 5, ../sass/base/_base.scss */
+ul li:hover {
+  color: red;
+}
+
+/* line 14, ../sass/base/_base.scss */
+.section-padding {
+  padding: 50px;
+}
+
+/* line 23, ../sass/base/_base.scss */
+.button-s {
+  border: 2px solid black;
+  margin: 20px;
+}
+
+/* line 28, ../sass/base/_base.scss */
+.service__heading {
+  margin: 50px;
+}
+
+/* line 1, ../sass/module/_navbar.scss */
+nav ul li a {
+  color: white !important;
+}
+
+/* line 6, ../sass/module/_navbar.scss */
+.color {
+  background-color: #24292E !important;
+}
+
+/* line 1, ../sass/module/_services.scss */
+.services {
+  background-color: #585858;
+}
+
+/* line 1, ../sass/module/_copyright.scss */
+.copyright {
+  padding: 10px 10px;
+  background-color: #000000;
+  color: white;
+}
+
+/* line 1, ../sass/module/_Footer.scss */
+.footer {
+  color: white;
+  background-color: #292929;
+}
+/* line 4, ../sass/module/_Footer.scss */
+.footer ul li a {
+  color: #fff;
+}
+
+/* line 1, ../sass/module/_Rooms.scss */
+.Rooms {
+  color: white;
+}
+
+/* line 1, ../sass/module/templates/_about.scss */
+.section-padding {
+  padding: 80px;
+}
+
+/* line 1, ../sass/module/templates/_Rooms.scss */
+.services-services {
+  padding: 10px;
+}
+.orderElement{
+  text-align: right;
+}
+
+th{
+    text-align: center;
+    align-content: center;
+
+}
+
+td{
+    text-align: center;
+}
+
+
+#background{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+#loginback{
+  background:url(https://free4kwallpapers.com/uploads/originals/2015/11/12/flight-takeoff-wallpaper.jpg);
+  background-size: 100%;
+}
+#registerback{
+  background:url(https://free4kwallpapers.com/uploads/originals/2015/10/17/american-airline-hd--wallpaper.jpg);
+  background-size: 100%;
+}
+#searchBack{
+  background:url(https://free4kwallpapers.com/uploads/originals/2015/11/22/flight-wallpaper.jpg);
+  background-size: 100%;
+}
+#Back{
+  background:url(https://free4kwallpapers.com/uploads/wallpaper/itap-while-boarding-a-flight-on-the-wet-tarmac-of-hk-airport-wallpaper-1024x768-wallpaper.jpg);
+  background-size: 100%;
+}
+#formBack{
+  background:url(https://free4kwallpapers.com/uploads/wallpaper/new-zealand-flight-wallpaper-1024x768-wallpaper.jpg);
+  background-size: 100%;
+}
+#roomEditBack{
+  background:url(https://free4kwallpapers.com/uploads/wallpaper/gotham-7k-a-rare-high-altitude-night-flight-above-nyc-produces-some-great-photos-wallpaper-1024x768-wallpaper.jpg);
+  background-size: 100%;
+}
+#roomDeleteBack{
+  background:url(https://free4kwallpapers.com/uploads/originals/2015/11/13/c-17-globemaster-iii-aircraft-wallpaper.jpg);
+  background-size: 100%;
+}
+#reserveBack{
+  background:url(https://free4kwallpapers.com/uploads/originals/2015/09/12/aircraft-wallpaper-hd.jpg);
+  background-size: 100%;
+}
+#indexBack{
+  background:url(https://images.shobserver.com/news/690_390/2019/3/14/3dc1f30e-1f7c-4fdb-b9e8-8a9e8a8b30b7.jpg);
+  background-size: 100%;
+}
+#title{
+  color:white;
+}
+#logo{
+  height: 50px;
+  width: 50px;
+}
+#addButton{
+    margin-bottom: 20px;
+}
+#date{
+  display: block;
+  margin: 5px;
+}
+div.ng-scope{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+html{
+  height: 100%;
+}

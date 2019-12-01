@@ -1,0 +1,79 @@
+<div id="roomDeleteBack">
+    <nav class=" color navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/#/"><b>Airline Reservation System</b></a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/#/">Home</a></li>
+                <li ng-show="admin"><a href="/#/flights">Flight Management</a></li>
+                <li><a href="/#/search">Search</a></li>
+                <li ng-show="signout"><a href="/#/" ng-click="signOut()">Log Out</a></li>
+                <li><a ng-href={{accountHref}}>{{loginName}}</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-padding" >
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Delete Flight</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                Are you sure you want to delete this flight?
+                            </p>
+                            <form>
+                                <div class="form-group">
+                                    <label>Flight Id</label>
+                                    {{flight._id}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Capacity</label>
+                                    {{flight.capacity}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Price</label>
+                                    {{flight.price}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Departure City</label>
+                                    {{flight.departureCity}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Arrival City</label>
+                                    {{flight.arrivalCity}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Duration</label>
+                                    {{flight.duration}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Take Off Time</label>
+                                    {{flight.takeOffTime}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Available</label>
+                                    {{flight.available}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Date</label>
+                                    {{flight.date}}
+                                </div>
+                                <div class="form-group">
+                                    <label>Reserved Count</label>
+                                    {{flight.reservedCount}}
+                                </div>
+                                <input type="button" value="Delete" class="btn btn-danger" ng-click="delete()" >
+                                <a class="btn btn-default" href="/#/flights">Go Back</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

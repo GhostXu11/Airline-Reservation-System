@@ -1,0 +1,67 @@
+<div id="Back">
+    <nav class=" color navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/#/"><b>Airline Reservation System</b></a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/#/">Home</a></li>
+                <li ng-show="admin"><a href="/#/flights">Flight Management</a></li>
+                <li><a href="/#/search">Search</a></li>
+                <li ng-show="signout"><a href="/#/" ng-click="signOut()">Log Out</a></li>
+                <li><a ng-href={{accountHref}}>{{loginName}}</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-padding" >
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Flights List</h3>
+                        </div>
+                        <div class="panel-body">
+                            <a id="addButton" class="btn btn-primary" href="/#/flights/form">Add New Flight</a>
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                <tr>
+                                    <th>Flight Id</th>
+                                    <th>Capacity</th>
+                                    <th>Price</th>
+                                    <th>Departure</th>
+                                    <th>Arrival</th>
+                                    <th>Duration</th>
+                                    <th>Take Off Time</th>
+                                    <th>Date</th>
+                                    <th>Available</th>
+                                    <th>Reserved Count</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="gradeX" ng-repeat="flight in flights">
+                                    <td>{{flight._id}}</td>
+                                    <td>{{flight.capacity}}</td>
+                                    <td>{{flight.price}}</td>
+                                    <td>{{flight.departureCity}}</td>
+                                    <td>{{flight.arrivalCity}}</td>
+                                    <td>{{flight.duration}}</td>
+                                    <td>{{flight.takeOffTime}}</td>
+                                    <td>{{flight.date}}</td>
+                                    <td>{{flight.available}}</td>
+                                    <td>{{flight.reservedCount}}</td>
+                                    <td><a class="btn btn-info" href="/#/flights/edit/{{flight._id}}">Edit</a></td>
+                                    <td><a class="btn btn-danger" href="/#/flights/delete/{{flight._id}}">Delete</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

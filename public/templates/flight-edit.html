@@ -1,0 +1,69 @@
+<div id="roomEditBack">
+    <nav class=" color navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/#/"><b>Airline Reservation System</b></a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/#/">Home</a></li>
+                <li ng-show="admin"><a href="/#/flights">Flight Management</a></li>
+                <li><a href="/#/search">Search</a></li>
+                <li ng-show="signout"><a href="/#/" ng-click="signOut()">Log Out</a></li>
+                <li><a ng-href={{accountHref}}>{{loginName}}</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-padding" >
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Edit Flight</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <label>Flight Capacity</label>
+                                    <input class="form-control" ng-model="flight.capacity">
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight price</label>
+                                    <input class="form-control" ng-model="flight.price">
+                                </div>
+                                <div class="form-group">
+                                    <label>Available</label>
+                                    <select class="form-control" ng-options="(item ? 'True':'False') for item in [true, false]"
+                                            ng-model="flight.available"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Departure City</label>
+                                    <input class="form-control" ng-model="flight.departureCity">
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Arrival City</label>
+                                    <input class="form-control" ng-model="flight.arrivalCity">
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Duration</label>
+                                    <input class="form-control" ng-model="flight.duration">
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Take Off Time</label>
+                                    <input class="form-control" ng-model="flight.takeOffTime">
+                                </div>
+                                <div class="form-group">
+                                    <label>Flight Date</label>
+                                    <input class="form-control" type="date" min="1900-01-01" max="2200-12-31" ng-model="flight.date">
+                                </div>
+                                <input type="button" class="btn btn-primary" value="Save" ng-click="save()">
+                                <a class="btn btn-default" href="/#/flights">Go Back</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

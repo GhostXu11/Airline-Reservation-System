@@ -1,0 +1,64 @@
+<div id="registerback">
+    <nav class=" color navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/#/"><b>Airline Reservation System</b></a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/#/">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-padding" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="login-panel panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Customer Register</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <!--<div class="alert alert-success" ng-show=""> Registered successfully...</div>-->
+                            <div class="alert alert-danger" ng-show="fullnameMessage">Unvaild Full Name</div>
+                            <div class="alert alert-danger" ng-show="usernameMessage">Unvalid User Name or Username already exist</div>
+                            <div class="alert alert-danger" ng-show="passwordMessage">Unvalid Password</div>
+                            <div class="alert alert-danger" ng-show="addressMessage">Unvalid Address</div>
+                            <div class="alert alert-danger" ng-show="emailMessage">Unvalid Email</div>
+                            <div class="alert alert-danger" ng-show="phoneMessage">Unvalid Phone Number</div>
+
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" ng-blur="fullnameValidation()" placeholder="Full Name" id='fullname' name="fullname" ng-model='fullname' type="text"  value="" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control"  ng-blur="usernameValidation()" placeholder="* Username (alphabet or numeric)" id='username' name="username" ng-model='username' type="text" value="" autofocus required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" ng-blur="passwordValidation()"  type='password' placeholder="* Password (alphabet or numeric, at least six)" id='password' name="password" ng-model='password' value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" ng-blur="addressValidation()" type='address' placeholder="Address" id='address' name="address" ng-model='address' value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" ng-blur="emailValidation()" type='email' placeholder="* Email" id='email' name="email" ng-model='email' value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" ng-blur="phoneValidation()" type='phone' placeholder="Phone Number" id='phone' name="phone" ng-model='phone' value="" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" ng-click="registerUser()" class="btn btn-primary">Register</button>
+                                    <button type="submit" ng-click="back()" class="btn btn-default">Back to Login</button>
+
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="Airline">
+<head>
+    <title><%=title%></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js"></script>
+    <script src="/javascripts/airline.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+<div ng-view="ng-view"></div>
+<nav class="color navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-header"><img id="logo" src="/images/logo.jpg"/></div>
+        <ul class="nav navbar-nav pull-right">
+            <li><a href="/#/">Home</a></li>
+            <li ng-show="admin"><a href="/#/flights">Flight Management</a></li>
+            <li><a href="/#/search">Search</a></li>
+            <li><a href="/#/">Contact</a></li>
+            <li ng-show="signout"><a href="/#/" ng-click="signOut()">Log Out</a></li>
+            <li><a ng-href="{{AccountHref}}">{{LoginName}}</a></li>
+        </ul>
+    </div>
+</nav>
+</body>
+</html>

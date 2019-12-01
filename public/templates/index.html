@@ -1,0 +1,62 @@
+<nav class=" color navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/#/"><b>Airline Reservation System</b></a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li><a href="/#/">Home</a></li>
+            <li ng-show="admin"><a href="/#/flights">Flight Management</a></li>
+            <li><a href="/#/search">Search</a></li>
+            <li ng-show="signout"><a href="/#/" ng-click="signOut()">Log Out</a></li>
+            <li><a ng-href={{accountHref}}>{{loginName}}</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="indexBack">
+</div>
+
+
+
+<!-- Services -->
+<section class="section-padding">
+    <div class="container">
+                <h1 class="service__heading service--headingbg top-margin"><b>Go See The World</b></h1></center>
+            <div class="row">
+                <div class="col-md-4 box">
+                    <img src="data:image/jpeg;base64,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" class="img-thumbnail" height="400" width="600">
+                    <h3>Watch Your Status Soar</h3>
+                    <p class="paragraph">Earn 40,000 bonus miles and 10,000 MQMs. Plus, enjoy complimentary Flight club access. Terms and Conditions apply. Act Now!.</p>
+                </div>
+                <div class="col-md-4 box">
+                    <img src="https://s3-ap-southeast-1.amazonaws.com/traveloka/imageResource/2018/12/26/1545807545331-a489faf96dd2a05537a954b7cdb39b0b.jpeg" class="img-thumbnail" height="400" width="600">
+                    <h3>Book Cheap Flights Easily with our User-Friendly Features</h3>
+                    <p class="paragraph">To provide customers with only the best user experience, we are continuously adding prominent features that will make flight search and flight booking via our platform easier. </p>
+                </div>
+                <div class="col-md-4 box">
+                    <img src="https://media.united.com/images/Media%20Database/SDL/homepage/Diffentiator/United-Difference-MoreSeats_1136x530.jpg" class="img-thumbnail" >
+                    <h3>Fleet</h3>
+                    <p class="paragraph">We know comfort is an essential part of your journey with us. That’s why we’ve started adding more premium cabin seats on our aircraft and will continue to do so.</p>
+                </div>
+            </div>
+            <div class="services-services">
+                <div class="row">
+                    <div class="col-md-4 box">
+                        <img src="https://media.united.com/images/Media%20Database/SDL/homepage/Diffentiator/United-Difference-Ent_1136x530.jpg" class="img-thumbnail">
+                        <h3>Entertainment</h3>
+                        <p class="paragraph">Get free live television and movies on all flights with TV. That means you can cheer on your favorite team, stay up to date with the news, watch popular reruns, enjoy movies and more at 35,000 feet.</p>
+                    </div>
+                    <div class="col-md-4 box">
+                        <img src="https://media.united.com/images/Media%20Database/SDL/homepage/ud_desktop_lounges-1x.jpg" class="img-thumbnail">
+                        <h3>Lounge</h3>
+                        <p class="paragraph">We’ve been revamping our Club locations by adding updated food and beverage options, new seating areas, additional outlets for charging and more.</p>
+                    </div>
+                    <div class="col-md-4 box">
+                        <img src="https://media.united.com/images/Media%20Database/SDL/homepage/United-Difference-dining_1136x530.jpg" class="img-thumbnail">
+                        <h3>Dinning</h3>
+                        <p class="paragraph">We offer enhanced options no matter where you fly. Whether you’re traveling with us, enjoy a reimagined inflight dining experience.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+   </section>
